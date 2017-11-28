@@ -1,0 +1,48 @@
+﻿{% extends 'Aluno/BaseAluno.html' %}
+
+{% block titulo %} Editar - Perfil {% endblock %}
+{% block nome_pagina %}Perfil{% endblock %}
+
+{% block corpo %}
+    <div class="pos respon">
+    <table class="highlight bordered responsive-table centered" >
+        <thead>
+            <tr>
+                <th>Nome</th>
+                <th>Data</th>
+                <th>Arquivo</th>
+            </tr>
+        </thead>
+
+        <tbody>
+            <tr>
+                <td>Sieghart</td>
+                <td>21/10/2017</td>
+                <td>teste.pdf <br /><button class="btn-flat waves-effect waves-light blue">Baixar</button></td>
+            </tr>
+            <tr>
+                <td>Jin</td>
+                <td>11/11/2014</td>
+                <td>teste.xml <br /><button class="btn-flat waves-effect waves-light blue">Baixar</button></td>
+            </tr>
+            <tr>
+                <td>Elises</td>
+                <td>01/11/2015</td>
+                <td>teste.dll <br /><button class="btn-flat waves-effect waves-light blue">Baixar</button></td>
+            </tr>
+
+        </tbody>
+    </table>
+
+        <ul class="pagination">
+            <li class="disabled"><a href="#!"><i class="material-icons">chevron_left</i></a></li>
+            <li class="active blue"><a href="#!">1</a></li>
+            <li class="waves-effect"><a href="#!">2</a></li>
+            <li class="waves-effect"><a href="#!">3</a></li>
+            <li class="waves-effect"><a href="#!">4</a></li>
+            <li class="waves-effect"><a href="#!">5</a></li>
+            <li class="waves-effect"><a href="#!"><i class="material-icons">chevron_right</i></a></li>
+        </ul>
+
+    </div>
+{% endblock %}

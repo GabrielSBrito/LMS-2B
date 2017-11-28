@@ -1,0 +1,47 @@
+﻿{% extends 'Professor/BaseProfessor.html' %}
+
+{% block titulo %} Página Inicial - Professor {% endblock %}
+{% block nome_pagina %}Área do Professor{% endblock %}
+
+{% block corpo %}
+    </main>
+    <div class="relativo" style="bottom:19px">
+        <div style="position:initial;">
+            <div class="divider"></div>
+            <nav class="pos row black ">
+                <div class="nav-wrapper">
+                    <div class="col s12">
+                        <a href="/selecionar_turma_falta" class="breadcrumb">Turma</a>
+                    </div>
+                </div>
+            </nav>
+        </div>
+    </div>
+    <div class="relativo" style="bottom:40px">
+        <div class="pos pos-cel" style="position:initial">
+            <table class="highlight bordered responsive-table centered">
+                <thead>
+                    <tr>
+                        <th>Turma</th>
+                        <th>Aula</th>
+                        <th>Periodo</th>
+                        <th>Semestre</th>
+                    </tr>
+                </thead>
+
+                <tbody>
+                    <tr>
+                        <td>ADS</td>
+                        <td>TecWeb</td>
+                        <td>Manhã</td>
+                        <td>1º<br /><a href="/faltas"><button class="btn-flat waves-effect waves-light blue">Faltas</button></a></td>
+                    </tr>
+
+                </tbody>
+            </table>
+
+
+
+        </div>
+        </div>
+{% endblock %}

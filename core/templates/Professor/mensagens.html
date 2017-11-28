@@ -1,0 +1,33 @@
+﻿{% extends 'Professor/BaseProfessor.html' %}
+
+{% block titulo %} Chamada {% endblock %}
+{% block nome_pagina %}Faltas{% endblock %}
+
+{% block corpo %}
+
+    <div class="container ">
+        <div class="section">
+        </div>
+
+    </div>
+    <br><br>
+    <div>
+        <!-- Inicio do aviso -->
+
+        <div class="row respon">
+            <div class="col s12 m6">
+                <div class="card blue-grey darken-1">
+                    <div class="card-content white-text">
+                        <span class="card-title">Mensagem</span>
+                        <p>
+                            Mensagem do Aluno
+                        </p>
+                    </div>
+                    <div class="card-action">
+                        <textarea class="light-blue-text" rows="5" cols="100" ></textarea>
+                        <a href="#">Responder</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+{% endblock %}

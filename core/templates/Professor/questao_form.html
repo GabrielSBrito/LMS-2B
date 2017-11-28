@@ -1,0 +1,102 @@
+{% extends 'Professor/BaseProfessor.html' %}
+
+{% block titulo %} Atividades/Questao {% endblock %}
+{% block nome_pagina %}Atividades/Questao{% endblock %}
+
+{% block corpo %}
+
+
+
+
+
+
+   <div class="container pos">
+        <div class="section">
+        </div>
+
+    </div>
+    <br><br>
+    <div>
+        <div class=" pos row">
+                
+                <h1> Questão </h1>
+                <h2>{{ turma_sigla }} </h2>
+                <form method="POST" action="" enctype="multipart/form-data">
+                    {{ form.as_p }}
+        
+                    {% csrf_token %}
+                    <button class="btn-large waves-effect waves-light blue" type="submit">Enviar</button>
+                </form>
+            
+  
+
+
+<!--             <form action=''method="post" class="col s12 m12">
+
+                <div class="row pos">
+                    <div class="col s6">
+                        <label for="date_inicio">Data inicio</label>
+                        <b><input id="date_inicio" type="text" class="datepicker"></b>
+                    </div>
+                    <div class="col s6">
+                        <label for="hora_inicio">Hora inicio</label>
+                        <b><input id="hora_inicio" type="text" class="timepicker"></b>
+                    </div>
+                </div>
+                <div class="row pos">
+                    <div class="col s6">
+                        <label for="date_fim">Data Fim</label>
+                        <b><input id="date_fim" type="text" class="datepicker"></b>
+                    </div>
+                    <div class="col s6">
+                        <label for="hora_fim">Hora Fim</label>
+                        <b><input id="hora_fim" type="text" class="timepicker"></b>
+                    </div>
+                </div>
+                <div class="row pos">
+                    <div class="col s6">
+                        <input class="with-gap" name="prof" type="radio" id="Trabalho" value="1" />
+                        <label for="Trabalho">Trabalho</label>
+                    </div>
+                    <div class="col s6">
+                        <input class="with-gap" name="prof" type="radio" id="Exercicio" value="2" />
+                        <label for="Exercicio">Exercício</label>
+
+                    </div>
+                    
+                </div>
+                <div class="row pos">
+                    <div class="input-field col s8 ">
+                        <select  multiple>
+                            <option value="" disabled selected>Selecione a turma</option>
+                            <option value="1">Option 1</option>
+                            <option value="2">Option 2</option>
+                            <option value="3">Option 3</option>
+                            <option value="4">Option 4</option>
+                            <option value="5">Option 5</option>
+                        </select>
+                        <label>Selecione a turma</label>
+                    </div>
+                    </div>
+                    <div class="row pos">
+                        <div class="col s12">
+                            <div class="file-field input-field">
+                                <div class="btn">
+                                    <span>Arquivos</span>
+                                    <input type="file" multiple>
+                                </div>
+                                <div class="file-path-wrapper col s12">
+                                    <input class="file-path validate" type="text" placeholder="Upload one or more files">
+                                </div>
+                            </div>
+                        </div>
+                        <br /><br /><br /><br /><br />
+                        <center><button class="btn-large waves-effect waves-light blue" type="submit">Enviar</button></center>
+                    </div>
+
+
+</form>-->
+            
+
+            </div> 
+{% endblock %} 

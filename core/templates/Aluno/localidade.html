@@ -1,0 +1,30 @@
+{% extends 'Aluno/BaseAluno.html' %}
+
+{% block titulo %} Localização {% endblock %}
+{% block nome_pagina %}Localização{% endblock %}
+
+{% block corpo %}
+<br/><br/><br/>
+<center><div id="googleMap" class="w3-grayscale" style="width:100%;height:550px;"></div>
+
+<script>
+function myMap()
+{
+  myCenter=new google.maps.LatLng(-23.52585685, -46.64927155);
+  var mapOptions= {
+    center:myCenter,
+    zoom:18, scrollwheel: true, draggable: true,
+    mapTypeId:google.maps.MapTypeId.ROADMAP
+  };
+  var map=new google.maps.Map(document.getElementById("googleMap"),mapOptions);
+
+  var marker = new google.maps.Marker({
+    position: myCenter,
+  });
+  marker.setMap(map);
+}
+</script>
+
+<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAFYA4gLRFuq3F8gKoDPU_4GppL_AvqqE4&callback=myMap"></script>
+</center>
+{% endblock %}

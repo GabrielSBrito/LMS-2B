@@ -1,0 +1,52 @@
+{% extends 'Aluno/BaseAluno.html' %}
+
+{% block titulo %} Exercícios {% endblock %}
+{% block nome_pagina %}Exercícios{% endblock %}
+
+{% block corpo %}
+
+    <div class="pos respon">
+    <table class="highlight bordered responsive-table centered" >
+    <div id="divConteudo">
+        <table id="tabela">
+            <thead>
+                <tr>
+                    <th>Professor</th>
+                    <th>Disciplina</th>
+                    <th>Arquivo</th>
+                </tr>
+                <tr>
+                    <th><input type="text" id="txtColuna2"/></th>
+                    <th><input type="text" id="txtColuna3"/></th>
+                </tr>            
+            </thead>
+            <tbody>
+                <tr>
+                    <td>Takai</td>
+                    <td>Python</td>
+                    <td>teste.pdf <br /><button id="redondo" class="btn-flat waves-effect waves-light blue">Baixar</button></td>
+                </tr>
+                <tr>
+                    <td>Sand</td>
+                    <td>SQL</td>
+                    <td>teste.pdf <br /><button id="redondo" class="btn-flat waves-effect waves-light blue">Baixar</button></td>
+                </tr>            
+                <tr>
+                    <td>Sand</td>
+                    <td>SQL2</td>
+                    <td>teste.pdf <br /><button id="redondo" class="btn-flat waves-effect waves-light blue">Baixar</button></td>
+                </tr>
+                <tr>
+                    <td>Takai</td>
+                    <td>Engenharia</td>
+                    <td>teste.pdf <br /><button id="redondo" class="btn-flat waves-effect waves-light blue">Baixar</button></td>
+                </tr>
+                <tr>
+                    <td>Vanderson</td>
+                    <td>HTML5</td>
+                    <td>teste.pdf <br /><button id="redondo" class="btn-flat waves-effect waves-light blue">Baixar</button></td>
+                </tr>            
+            </tbody>
+        </table>
+    </div>
+{% endblock %}

@@ -1,0 +1,98 @@
+/* Custom Stylesheet */
+/**
+ * Use this file to override Materialize files so you can update
+ * the core Materialize files in the future
+ *
+ * Made By MaterializeCSS.com
+ */
+
+.icon-block {
+  padding: 0 15px;
+}
+.icon-block .material-icons {
+	font-size: inherit;
+}
+
+body {
+    display: flex;
+    min-height: 100vh;
+    flex-direction: column;
+}
+
+main{
+    flex: 1 0 auto;
+}
+
+.font-head {
+    font-size: 4.375em; /*70/16*/
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    text-transform: uppercase;
+}
+
+
+
+
+
+
+.azul-aqua {
+    color: aqua;
+}
+
+.menu-pos {
+    position: relative;
+    float: left;
+}
+
+header, main, footer, .pos {
+    padding-left: 300px;
+}
+
+.relativo{
+    position:relative;
+}
+
+.absoluto {
+    position: absolute;
+}
+
+.side-nav {
+    height:100%
+}
+.side-nav li a{
+    height: auto
+}
+
+@media only screen and (min-width : 993px) {
+    
+        /*
+
+    .table-pos{
+        top:130px;
+        width:100%;
+    }
+    */
+    }
+
+    @media only screen and (max-width : 992px) {
+        header, main, footer, .pos {
+            padding-left: 0px;
+        }
+
+        .font-head {
+            font-size: 2.5em /*40/16*/;
+        }
+
+
+        
+
+       
+        .pos-cel{
+            position:relative;
+            top:40px;
+            height:auto;
+            width: auto;
+        }
+        
+       
+    }
+

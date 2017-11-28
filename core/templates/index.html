@@ -1,0 +1,15 @@
+{% extends 'base_externa.html' %}
+
+{% load static %}
+
+{% block titulo %} HOME PAGE {% endblock %} 
+
+{% block corpo %}
+<h1> HOMEEEE PAAGEEEE </h1>
+<ul>
+        {% for curso in cursos %}
+            <li class="{{curso.classe}}"> {{curso.sigla}} - {{ curso.nome }}  </li>
+           
+        {% endfor %}    
+</ul>
+{% endblock %}

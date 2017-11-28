@@ -1,0 +1,43 @@
+{% extends 'Aluno/BaseAluno.html' %}
+
+{% block titulo %}Envio de Trabalhos{% endblock %}
+{% block nome_pagina %}Envio de Trabalhos{% endblock %}
+
+{% block corpo %}
+    <div class="pos respon">
+    <table class="highlight bordered responsive-table centered" >
+        <thead>
+            <tr>
+                <th>Nome Professor</th>
+            </tr>
+        </thead>
+
+        <tbody>
+            <tr>
+                <td>
+                    <select>
+                        <option>Qual Professor?</option>
+                        <option>Vanderson</option>
+                        <option>Takai</option>
+                        <option>Sand</option>
+                    </select>
+                </td>
+                <td><td><textarea>Obs:</textarea><br /></td></td>
+            </tr>
+        </tbody>
+    </table>
+    </div>
+
+    <div class="pos respon" style="margin-left:500px;">
+    <table class="highlight bordered responsive-table centered" >
+
+        <tbody>
+                <a href="#.html" class="meio2"><br /><button id="redondo" class="btn-flat waves-effect waves-light blue" style="margin-left:-40px">Upload</button></a><br/><br/><br/>
+                <a href="#.html" class="meio2"><br /><button id="redondo" class="btn-flat waves-effect waves-light blue" style="margin-left:-40px">Enviar</button></a><br/><br/><br/>
+            </tr>
+
+        </tbody>
+    </table>
+
+    </div>
+{% endblock %}

@@ -1,0 +1,62 @@
+﻿{% extends 'Professor/BaseProfessor.html' %}
+
+{% block titulo %} Notas {% endblock %}
+{% block nome_pagina %}Notas{% endblock %}
+
+{% block corpo %}
+    </main>
+
+    <div class="relativo" style="bottom:30px">
+        <div style="position:initial;">
+            <div class="divider"></div>
+            <nav class=" row black ">
+                <div class="nav-wrapper">
+                    <div class="col s12">
+                        <a href="/boletim" class="breadcrumb">Turma</a>
+                        <a href="/notas" class="breadcrumb">Notas</a>
+                    </div>
+                </div>
+            </nav>
+        </div>
+    </div>
+
+
+    <div class="relativo" style="bottom:50px">
+        <div class=" pos-cel" style="position:initial">
+            <div class="col s12">
+                <table class="highlight bordered responsive-table centered">
+                    <thead>
+                        <tr>
+                            <th>Aluno</th>
+                            <th>MB1</th>
+                            <th>SUB1</th>
+                            <th>MB2</th>
+                            <th>SUB2</th>
+                            <th>EXAME</th>
+                            <th>Final</th>
+
+                        </tr>
+                    </thead>
+
+                    <tbody>
+                        <tr>
+                            <td>Stefany</td>
+                            <td><input size="4" type="label" maxlength="4" /></td>
+                            <td><input size="4" type="label" maxlength="4" /></td>
+                            <td><input size="4" type="label" maxlength="4" /></td>
+                            <td><input size="4" type="label" maxlength="4" /></td>
+                            <td><input size="4" type="label" maxlength="4" /></td>
+                            <td><input disabled size="4" type="label" maxlength="4" /></td>
+                            <td><button class="btn-flat waves-effect waves-light blue">Salvar</button></td>
+                        </tr>
+
+
+                    </tbody>
+
+                </table>
+                <br />
+                <center><button class="btn-flat waves-effect waves-light blue">Salvar Todos</button></center>
+                </div>
+            </div>
+        </div>
+{% endblock %}

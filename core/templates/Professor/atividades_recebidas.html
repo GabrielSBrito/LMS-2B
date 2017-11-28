@@ -1,0 +1,77 @@
+﻿{% extends 'Professor/BaseProfessor.html' %}
+
+{% block titulo %} Atividades {% endblock %}
+{% block nome_pagina %}Atividades Recebidas{% endblock %}
+
+{% block corpo %}
+
+    <div class="relativo" style="bottom:19px">
+        <div style="position:initial;">
+            <div class="divider"></div>
+            <nav class="pos row black ">
+                <div class="nav-wrapper">
+                    <div class="col s12">
+                        <a href="EntregasProf.html" class="breadcrumb">Entregas</a>
+                    </div>
+                </div>
+            </nav>
+        </div>
+        </div>
+
+        <div class="relativo" style="bottom:20px">
+            <div class="pos pos-cel" style="position:initial">
+                <div class="col l12">
+                    <table class="highlight bordered responsive-table centered">
+                        <thead>
+                            <tr>
+                                <th>Nome</th>
+                                <th>Data</th>
+                                <th>Arquivo</th>
+                            </tr>
+                        </thead>
+
+                        <tbody>
+                            <tr>
+                                <td>Guilherme</td>
+                                <td>21/03/2017</td>
+                                <td>
+                                    teste.pdf <br />
+                                    <button class="btn-flat waves-effect waves-light blue">Baixar</button>
+                                    <a href="Feedback.html"><button class="btn-flat waves-effect waves-light blue">Comentar</button></a>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>Stefany</td>
+                                <td>11/03/2017</td>
+                                <td>
+                                    teste.xml <br />
+                                    <button class="btn-flat waves-effect waves-light blue">Baixar</button>
+                                    <a href="Feedback.html"><button class="btn-flat waves-effect waves-light blue">Comentar</button></a>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>Gabriel</td>
+                                <td>01/03/2017</td>
+                                <td>
+                                    teste.jpg <br />
+                                    <button class="btn-flat waves-effect waves-light blue">Baixar</button>
+                                    <a href="Feedback.html"><button class="btn-flat waves-effect waves-light blue">Comentar</button></a>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+
+                    <ul class="pagination">
+                        <li><a href="#!"><i class="material-icons">chevron_left</i></a></li>
+                        <li class="active blue"><a href="#!">1</a></li>
+                        <li class="waves-effect"><a href="#!">2</a></li>
+                        <li class="waves-effect"><a href="#!">3</a></li>
+                        <li class="waves-effect"><a href="#!">4</a></li>
+                        <li class="waves-effect"><a href="#!">5</a></li>
+                        <li class="waves-effect"><a href="#!"><i class="material-icons">chevron_right</i></a></li>
+                    </ul>
+
+                </div>
+            </div>
+        </div>
+{% endblock %}

@@ -1,0 +1,96 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1.0"/>
+  <title> {% block titulo %} {% endblock %} </title>    <!-- TITULO --><!-- TITULO --><!-- TITULO --><!-- TITULO --><!-- TITULO -->                                     
+
+  <!-- CSS  -->
+  <link    rel="stylesheet" href="{% static 'fonts\roboto\Roboto-Light.woff' %}" />
+
+  <link  type="text/css" rel="stylesheet" media="screen,projection" href= "{% static 'css/materialize.css' %}" />
+
+  <link  type="text/css" rel="stylesheet" media="screen,projection" href= "{% static 'css/style.css' %}"/>
+
+</head>
+<body class="grey darken-1">
+
+  <nav class="grey darken-4" role="navigation">
+    <div class="nav-wrapper container"><img src="{% static 'img/logo.png' %}" width="200px" />
+      
+      <ul class="right hide-on-med-and-down">
+        <li><a class="blue-text text-lighten-3" href= "/matricula"> Matricula </a></li>
+        <li><a class="blue-text text-lighten-3" href= "/"> HomePage </a></li>
+          
+        {% if not user.is_authenticated %}  
+          <li><a class="blue-text text-lighten-3" href= "/entrar"> Login </a></li>
+        {% else %}
+          <li><a class="blue-text text-lighten-3" href= "/pagina_inicial_professor"> Área do Professor </a></li>  
+        {% endif %}
+
+          
+          
+          
+          
+          
+
+      </ul>
+
+      <ul id="nav-mobile" class="side-nav">
+        <li><a href= ><h2> </h2></a></li>
+      </ul>
+      <a href="#" data-activates="nav-mobile" class="button-collapse"><i class="material-icons">menu</i></a>
+    </div>
+  </nav>
+
+    {% block corpo %}
+
+
+    {% endblock %}
+
+
+  
+  <footer class="page-footer black">
+    <div class="container">
+      <div class="row">
+        <div class="col l6 s12">
+          <h5 class="white-text">Impacta</h5>
+          <p class="grey-text text-lighten-4">A Faculdade Impacta Tecnologia nasceu da percepção de um Grupo, que desde 1998 é referência em TI, Gestão e Design, para suprir a falta de mão de obra especializada do mercado de tecnologia e oferecer uma formação completa e multidisciplinar aos alunos. </p>
+
+
+        </div>
+        <div class="col l3 s12">
+          <h5 class="white-text">Contato</h5>
+          <ul>
+            <li class="white-text">Comercial</br>11 3254-8300</li>
+            <li class="white-text">Secretaria</br>11 5593-5345</li> 
+          </ul>
+        </div>
+        <div class="col l3 s12">
+          <h5 class="white-text">Endereço</h5>
+          <ul>
+            <li class="white-text">Unidade - Barra Funda Avenida Rudge, 315 - Barra Funda São Paulo / SP</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+    <div class="footer-copyright">
+      <div class="container">
+          CNPJ: 59.069.914/0001-51
+      </div>
+    </div>
+  </footer>
+
+
+  <!--  Scripts-->
+  <script src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
+  <script src="{% static 'js/materialize.js' %}"></script>
+  <script src="{% static 'js/init.js' %}"></script>
+
+  </body>
+</html>
+
+
+

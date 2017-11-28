@@ -1,0 +1,16 @@
+{% extends 'Professor/BaseProfessor.html' %}
+
+{% block titulo %} Editar {% endblock %}
+{% block nome_pagina %}Editar Perfil / Mudar Senha{% endblock %}
+
+{% block corpo %}
+
+
+
+<center>
+        <form method="POST" action="">
+            {{ form.as_p }}
+            {% csrf_token %}
+            <button class="btn-large waves-effect waves-light blue" type="submit">Salvar</button>
+        </form></center>
+{% endblock %}

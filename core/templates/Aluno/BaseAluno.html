@@ -1,0 +1,110 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1.0"/>
+  <title>{% block titulo %} {% endblock %}</title>
+
+  <!-- CSS  -->
+  <link  rel="stylesheet" href="{% static 'fonts\roboto\Roboto-Light.woff' %}">
+  <link  type="text/css" rel="stylesheet" media="screen,projection" href="{% static 'css/materialize.css' %}"/>
+  <link  type="text/css" rel="stylesheet" media="screen,projection" href="{% static 'css/style.css' %}"/>
+</head>
+<body class="grey darken-1">
+    <main><!--Parte padrão-->
+        <div>
+            <nav class="black" role="navigation">
+                <center><span class="light-blue-text font-head">{% block nome_pagina %}{% endblock %}</span></center>
+            </nav>
+        </div>
+            <a href="#" data-activates="slide-out" class="button-collapse"><i class="material-icons">menu</i></a>
+
+        <div class="nav-wrapper container">
+            <!--Menu inicio-->
+
+            <ul id="slide-out" class="side-nav fixed grey darken-1 z-depth-5">
+                <li>
+                    <div class="user-view">
+                        <div class="background black">
+
+                        </div>
+                        <a href="#!user"><img class="circle" src="{% static 'img/user3.png' %}"></a><!--VERIFICAR LOGIN NA AULA DO YURI-->
+                        {% if user.is_authenticated %}
+                            <a href="#!name"><span class="white-text name">Olá, Aluno {{ user.nome }}</span></a>
+                            <a href="#!email"><span class="white-text email">{{ user.email }}</span></a>
+                            <a href="/sair/" class="btn-flat waves-effect waves-light blue"> Sair </a><!--Botão para logout--><!--VERIFICAR LOGOUT NA AULA DO YURI-->
+                        {% endif %}
+                        <a href="/perfilaluno"><button class="btn-flat waves-effect waves-light blue"> Editar</button></a><!--Botão para editar perfil-->
+                    </div>
+                </li>
+                <li><a href="/pagina_inicial_aluno"><i class="{% static 'icon/home.svg' %}">home</i>Página Inicial</a></li>
+                <li><a href="/entregas"><i class="{% static 'icon/esclama.svg' %}">priority_high</i>Entregas Pendentes</a></li>
+                <li><a href="/avisos"><i class="material-icons light-blue-text">message</i>Avisos para o Professor</a></li>
+                <li><a href="/disponivel"><i class="material-icons light-blue-text">assignment_turned_in</i>Disponibilidades</a></li>
+                <li><a href="/recepcao"><i class="material-icons light-blue-text">assignment</i>Recepção</a></li>
+                <li><a href="/boletim"><i class="material-icons light-blue-text">chrome_reader_mode</i>Boletim</a></li>
+            </ul>
+        </div><!--Menu Fim-->
+        
+            
+    </main>
+        {% block corpo %}
+
+        {% endblock %}
+
+    <div class="container pos">
+        <div class="section">
+            </div>
+
+        </div>
+        <br><br>
+    <div>
+
+
+            
+        <!-- Fim do aviso -->
+
+        <footer class="page-footer black"><!--Rodapé-->
+            <div class="container">
+                <div class="row">
+                    <div class="col l6 s12">
+                        <h5 class="white-text">Impacta</h5>
+                        <p class="grey-text text-lighten-4">A Faculdade Impacta Tecnologia nasceu da percepção de um Grupo, que desde 1998 é referência em TI, Gestão e Design, para suprir a falta de mão de obra especializada do mercado de tecnologia e oferecer uma formação completa e multidisciplinar aos alunos. </p>
+
+
+                    </div>
+                    <div class="col l3 s12">
+                        <h5 class="white-text">Contato</h5>
+                        <ul>
+                            <li class="white-text">Comercial</br>11 3254-8300</li>
+                            <li class="white-text">Secretaria</br>11 5593-5345</li>
+                        </ul>
+                    </div>
+                    <div class="col l3 s12">
+                        <h5 class="white-text">Endereço</h5>
+                        <ul>
+                            <li class="white-text">Unidade - Barra Funda Avenida Rudge, 315 - Barra Funda São Paulo / SP</li>
+                            <a href="/localidade"><li class="blue-text" >COMO CHEGAR?</li></a>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-copyright">
+                <div class="container">
+                    CNPJ: 59.069.914/0001-51
+                </div>
+            </div>
+        </footer>
+    </div>
+
+
+
+    <!--  Scripts-->
+    <script src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
+    <script src="{% static 'js/materialize.js' %}"></script>
+    <script src="{% static 'js/init.js' %}"></script>
+
+</body>
+</html>

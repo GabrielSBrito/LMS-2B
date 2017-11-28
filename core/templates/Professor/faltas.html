@@ -1,0 +1,96 @@
+﻿{% extends 'Professor/BaseProfessor.html' %}
+
+{% block titulo %} Chamada {% endblock %}
+{% block nome_pagina %}Faltas{% endblock %}
+
+{% block corpo %}
+   <div class="relativo" style="bottom:19px">
+    <div  style="position:initial;">
+        <div class="divider"></div>
+            <nav class="pos row black ">
+                <div class="nav-wrapper">
+                    <div class="col s12">
+                        <a href="/seleciona_turma_falta" class="breadcrumb">Turma</a>
+                        <a href="/faltas" class="breadcrumb">Faltas</a>
+                    </div>
+                </div>
+            </nav>
+    </div>
+       </div>
+    <div class="relativo" style="bottom:40px">
+        <div class=" pos-cel" style="position:initial">
+            <table class="highlight bordered responsive-table centered">
+
+
+                <tbody>
+                    <tr>
+                        <td>Guilherme</td>
+                        <td>
+                            <input class="with-gap" name="A1-A1" type="radio" id="A1-P1" value="P1" />
+                            <label for="A1-P1">P</label>
+                            <input class="with-gap" name="A1-A1" type="radio" id="A1-F1" value="F1" />
+                            <label for="A1-F1">F</label>
+                        </td>
+                        <td>
+                            <input class="with-gap" name="A1-A2" type="radio" id="A1-P2" value="P2" />
+                            <label for="A1-P2">P</label>
+                            <input class="with-gap" name="A1-A2" type="radio" id="A1-F2" value="F2" />
+                            <label for="A1-F2">F</label>
+                        </td>
+                        <td>
+                            <input class="with-gap" name="A1-A3" type="radio" id="A1-P3" value="P3" />
+                            <label for="A1-P3">P</label>
+                            <input class="with-gap" name="A1-A3" type="radio" id="A1-F3" value="F3" />
+                            <label for="A1-F3">F</label>
+                        </td>
+                        <td>
+                            <input class="with-gap" name="A1-A4" type="radio" id="A1-P4" value="P4" />
+                            <label for="A1-P4">P</label>
+                            <input class="with-gap" name="A1-A4" type="radio" id="A1-F4" value="F4" />
+                            <label for="A1-F4">F</label>
+                        </td>
+
+                    </tr>
+                    <tr>
+                        <td>Stefany</td>
+                        <td>
+                            <input class="with-gap" name="A2-A1" type="radio" id="A2-P1" value="P1" />
+                            <label for="A2-P1">P</label>
+                            <input class="with-gap" name="A2-A1" type="radio" id="A2-F1" value="F1" />
+                            <label for="A2-F1">F</label>
+                        </td>
+                        <td>
+                            <input class="with-gap" name="A2-A2" type="radio" id="A2-P2" value="P2" />
+                            <label for="A2-P2">P</label>
+                            <input class="with-gap" name="A2-A2" type="radio" id="A2-F2" value="F2" />
+                            <label for="A2-F2">F</label>
+                        </td>
+                        <td>
+                            <input class="with-gap" name="A2-A3" type="radio" id="A2-P3" value="P3" />
+                            <label for="A2-P3">P</label>
+                            <input class="with-gap" name="A2-A3" type="radio" id="A2-F3" value="F3" />
+                            <label for="A2-F3">F</label>
+                        </td>
+                        <td>
+                            <input class="with-gap" name="A2-A4" type="radio" id="A2-P4" value="P4" />
+                            <label for="A2-P4">P</label>
+                            <input class="with-gap" name="A2-A4" type="radio" id="A2-F4" value="F4" />
+                            <label for="A2-F4">F</label>
+                        </td>
+
+                    </tr>
+                    <tr>
+                        <td></td>
+                        <td><button class="btn-flat waves-effect waves-light blue">Salvar</button></td>
+                        <td><button class="btn-flat waves-effect waves-light blue">Salvar</button></td>
+                        <td><button class="btn-flat waves-effect waves-light blue">Salvar</button></td>
+                        <td><button class="btn-flat waves-effect waves-light blue">Salvar</button></td>
+                        <center><td><button class="btn-flat waves-effect waves-light blue">Salvar Todos</button></td></center>
+
+                    </tr>
+                    
+                </tbody>
+            </table>
+        </div>
+    </div>
+{% endblock %}

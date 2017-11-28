@@ -1,0 +1,107 @@
+{% extends 'base_externa.html' %}
+
+{% load static %}
+
+{% block titulo %} Matricula {% endblock %} 
+
+
+
+{% block corpo %}
+
+<form method="POST" action="/matricula/"> 
+    {% csrf_token %}
+    
+    <p class="erros">{{form.errors}}</p>
+
+    {{ form.as_p }}
+
+    <button class="btn-large waves-effect waves-light blue" type="submit">Enviar</button><br /><br />
+
+
+</form>    
+
+    <!-- <div class="section no-pad-bot" id="index-banner">
+        <div class="container">
+        <br><br>
+        <h1 class="header center blue-text text-lighten-1">Matricula</h1>
+        <div class="row center">
+                <div class="row">
+                    <form method="post" action="{ url 'matricula'}" class="col s12">  
+                            {% csrf_token %}
+                        <div class="row">
+                            <div class="input-field col s6">
+                                <input  id="id_nome" name="nome" type="text" class="validate" required>
+                                <label for="id_nome">Primeiro Nome</label>
+                            </div>
+                            <div class="input-field col s6">
+                                <input id="id_sobrenome" name="sobrenome" type="text" class="validate" required>
+                                <label for="id_sobrenome">Sobrenome</label>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="input-field col s12">
+                                <input  id="id_endereco" name="endereco" type="text" class="validate" required>
+                                <label for="id_endereco">Endereço</label>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="input-field col s12">
+                                <input id="id_numero" name="numero" type="text" class="validate" required>
+                                <label for="id_numero">Número</label>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="input-field col s12">
+                                <input id="id_email" name="email" type="email" class="validate" >
+                                <label for="id_email">Email</label>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="input-field col s12">
+                                <select>
+                                    <optgroup label="Graduação">
+                                        <option value="1">Option1</option>
+                                        <option value="2">Option 2</option>
+                                    </optgroup>
+                                    <optgroup label="Pós Graduação">
+                                        <option value="3">Option 3</option>
+                                        <option value="4">Option 4</option>
+                                    </optgroup>
+                                </select>
+                                <label>Optgroups</label>
+                            </div>
+                        </div>
+                        <div class="file-field input-field">
+                                
+                            <p>RG, CPF, Comprovante de Residência, Histórico Escolar, Foto 3x4</p>
+                            <div class="btn">
+                                <span>File</span>
+                                <input type="file" id="id_file" name="file" multiple accept=".jpg, .pdf, .png, .txt">
+                            </div>
+                            <div class="file-path-wrapper">
+                                <input class="file-path validate" type="text" placeholder="Upload one or more files">
+                            </div>
+                        </div>
+                        <br />
+
+                        <button class="btn-large waves-effect waves-light blue" type="submit">Enviar</button><br /><br />
+                    
+                    </form>
+
+
+                    {% if form.errors %}
+                    <div class="red-text" style="font-size: 45px">
+                        
+                        <b><p>{{form.non_field_errors}} </p></b>
+                        
+                     </div> 
+                     {% endif %}      
+                     </div>
+                    
+                    </div>
+                <br><br>
+
+    </div>
+    </div>-->
+   
+{% endblock %}    

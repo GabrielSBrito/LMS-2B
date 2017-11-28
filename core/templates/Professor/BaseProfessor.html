@@ -1,0 +1,109 @@
+﻿{% load static %}
+
+<!DOCTYPE html>
+<html lang="en">
+<!--Página para lançar as faltas-->
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1.0" />
+    <title>{% block titulo %} {% endblock %}</title>
+
+    <!-- CSS  -->
+    <link rel="stylesheet" href="{% static 'fonts\roboto\Roboto-Light.woff' %}">
+    <link type="text/css" rel="stylesheet" media="screen,projection" href="{% static 'css/materialize.css' %}" />
+    <link type="text/css" rel="stylesheet" media="screen,projection" href="{% static 'css/style.css' %}" />
+</head>
+<body class="grey darken-1">
+    <main>
+        <!--Parte padrão-->
+        <div class="row">
+            <nav class="black" role="navigation">
+                <a href="#" data-activates="slide-out" class="button-collapse"><i class=" medium material-icons">menu</i></a>
+                <center><span class="light-blue-text font-head">{% block nome_pagina %}{% endblock %}</span></center>
+            </nav>
+        </div>
+
+
+        <div class="nav-wrapper container">
+            <!--Menu inicio-->
+
+            <ul id="slide-out" class="side-nav fixed grey darken-1 z-depth-5">
+                <li>
+                    <div class="user-view">
+                        <div class="background black">
+                                    
+                        </div>
+                        <a href="#!user"><img class="circle" src="{% static 'img/user3.png' %}"></a><!--VERIFICAR LOGIN NA AULA DO YURI-->
+                        {% if user.is_authenticated %}
+                            <a href="#!name"><span class="white-text name">Olá, Professor {{ user.nome }}</span></a>
+                            <a href="#!email"><span class="white-text email">{{ user.email }}</span></a>
+                            <a href="/sair/" class="btn-flat waves-effect waves-light blue"> Sair </a><!--Botão para logout--><!--VERIFICAR LOGOUT NA AULA DO YURI-->
+                        {% endif %}
+                        <a href="/perfil_professor"><button class="btn-flat waves-effect waves-light blue"> Editar</button></a><!--Botão para editar perfil-->
+                    </div>
+                </li>
+                <li><a href="/pagina_inicial_professor"><img class="material-icons light-blue-text " src="{% static 'icon/home.svg' %}" />&nbsp&nbsp&nbsp&nbspPágina Inicial</a></li>
+                <li><a href="/subir_aula"><img src="{% static 'icon/class.svg' %}" />&nbsp&nbsp&nbsp&nbspAula</a></li>
+                <li><a href="/boletim"><img src="{% static 'icon/chrome_reader_mode.svg' %}" />&nbsp&nbsp&nbsp&nbspBoletim</a></li>
+                <li><a href="/seleciona_turma_falta"><img src="{% static 'icon/error.svg' %}" />&nbsp&nbsp&nbsp&nbspFaltas</a></li>
+                <li><a href="#!"><img src="{% static 'icon/flash_on.svg' %}" />&nbsp&nbsp&nbsp&nbspAplicação de testes</a></li>
+                <li><a href="/mensagens"><img src="{% static 'icon/chat.svg' %}" />&nbsp&nbsp&nbsp&nbspMensagens do aluno </a></li>
+                <li><a href="{% url 'subir_atividades' %}"><img src="{% static 'icon/dns.svg' %}" />&nbsp&nbsp&nbsp&nbspTrabalhos e Exercícios</a></li>
+                <li><a href="/atividades_recebidas"><img src="{% static 'icon/done_all.svg' %}" />&nbsp&nbsp&nbsp&nbspEntregas Recebidas</a></li>
+                <li><a href="/cancelar_matricula"><img src="{% static 'icon/close.svg' %}" />&nbsp&nbsp&nbsp&nbspCancelar de Matricula</a></li>
+
+
+            </ul>
+        </div><!--Menu Fim-->
+        {% block corpo %}
+
+        {% endblock %}
+
+    </main>
+    <div>
+
+
+        <footer class="page-footer black">
+            <!--Rodapé-->
+            <div class="container">
+                <div class="row">
+                    <div class="col l6 s12">
+                        <h5 class="white-text">Impacta</h5>
+                        <p class="grey-text text-lighten-4">A Faculdade Impacta Tecnologia nasceu da percepção de um Grupo, que desde 1998 é referência em TI, Gestão e Design, para suprir a falta de mão de obra especializada do mercado de tecnologia e oferecer uma formação completa e multidisciplinar aos alunos. </p>
+
+
+                    </div>
+                    <div class="col l3 s12">
+                        <h5 class="white-text">Contato</h5>
+                        <ul>
+                            <li class="white-text">Comercial</br>11 3254-8300</li>
+                            <li class="white-text">Secretaria</br>11 5593-5345</li>
+                        </ul>
+                    </div>
+                    <div class="col l3 s12">
+                        <h5 class="white-text">Endereço</h5>
+                        <ul>
+                            <li class="white-text">Unidade - Barra Funda Avenida Rudge, 315 - Barra Funda São Paulo / SP</li>
+                            <a href="/localidade"><li class="blue-text" >COMO CHEGAR?</li></a>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-copyright">
+                <div class="container">
+                    CNPJ: 59.069.914/0001-51
+                </div>
+            </div>
+        </footer>
+    </div>
+    </div>
+
+
+
+    <!--  Scripts-->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.2/jquery.min.js"></script>
+    <script src="{% static 'js/materialize.js' %}"></script>
+    <script src="{% static 'js/init.js' %}"></script>
+
+</body>
+</html>

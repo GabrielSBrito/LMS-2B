@@ -1,0 +1,43 @@
+{% extends 'Aluno/BaseAluno.html' %}
+
+{% block titulo %} Disponibilidade de Disciplina {% endblock %}
+{% block nome_pagina %} Disponibilidade de Disciplina {% endblock %}
+
+{% block corpo %}
+<div id="sobe">
+	<div class="row pos respon">
+    <table class="highlight bordered responsive-table centered">
+        <thead>
+            <tr>
+                <form>
+                    Disciplina:<br/>
+                    <select name="disciplina" id="sobe">
+                        <option>Quais dias?</option>
+                        <option>segunda</option>
+                        <option>terça</option>
+                        <option>quarta</option>
+						<option>quinta</option>
+						<option>sexta</option>
+						<option>sabado</option>
+						<option>domingo</option>
+                    </select>
+                </form>
+            </tr>
+        </thead>
+		   <thead>
+            <tr>
+                <form>
+                    Disciplina:<br/>
+                    <select name="disciplina">
+                        <option>Quais Disciplina?</option>
+                        <option>Python</option>
+                        <option>SQL</option>
+						<option>HTML</option>
+						<textarea>Qual horário?</textarea><br>
+                    </select>
+                </form>
+            </tr>
+        </thead
+	</div>
+	</div>
+{% endblock %}
